@@ -10,21 +10,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#3D98FF",
+        primary: "#32CD32",
         "text-primary": "#222222",
         "text-secundary": "#666666",
       },
       animation: {
-        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+        "infinite-scroll": "infinite-scroll 40s linear infinite",
       },
       keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-        }
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
     },
   },
-  plugins: [nextui()]
+  plugins: [nextui()],
 };
-
