@@ -1,0 +1,14 @@
+---
+const { imgSrc, title, description } = Astro.props;
+---
+
+<div class="liquid-effect max-w-fit p-4">
+  <div class="mb-4 border-2 border-white rounded-xl">
+    <img src={imgSrc} alt={title} />
+  </div>
+
+  <h3 class="font-medium text-xl mb-1">{title}</h3>
+  <p class="text-sm text-text-secundary font-medium">
+    {description}
+  </p>
+</div>

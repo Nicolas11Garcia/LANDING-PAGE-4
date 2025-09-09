@@ -1,0 +1,66 @@
+---
+import Badget from "../components/Badget.astro";
+import UserIcon from "../components/icons/UserIcon.astro";
+import LiquidCardIcon from "../components/LiquidCardIcon.astro";
+---
+
+<section
+  data-aos="fade-up"
+  class="pt-[120px] pb-[120px] space-y-14 flex flex-col px-5 max-w-[1280px] mx-auto"
+>
+  <div class="space-y-4">
+    <Badget title="Features" />
+
+    <h2 class="text-5xl font-medium text-center">
+      Automate Faster, Work Smarter
+    </h2>
+    <p class="font-medium text-text-secundary text-base text-center">
+      Powerful features that gives you the tools to scale with confidence.
+    </p>
+  </div>
+
+  <!--  Items -->
+  <div class="grid grid-cols-3 gap-4">
+    <!--  Item 1 -->
+    <LiquidCardIcon
+      Icon={UserIcon}
+      title="Discover & Analyze"
+      description="We start by understanding your business, identifying bottlenecks, and mapping out opportunities for automation."
+    />
+
+    <!--  Item 2 -->
+    <LiquidCardIcon
+      Icon={UserIcon}
+      title="Discover & Analyze"
+      description="We start by understanding your business, identifying bottlenecks, and mapping out opportunities for automation."
+    />
+
+    <!--  Item 3 -->
+    <LiquidCardIcon
+      Icon={UserIcon}
+      title="Discover & Analyze"
+      description="We start by understanding your business, identifying bottlenecks, and mapping out opportunities for automation."
+    />
+
+    <!--  Item 4 -->
+    <LiquidCardIcon
+      Icon={UserIcon}
+      title="Discover & Analyze"
+      description="We start by understanding your business, identifying bottlenecks, and mapping out opportunities for automation."
+    />
+
+    <!--  Item 5 -->
+    <LiquidCardIcon
+      Icon={UserIcon}
+      title="Discover & Analyze"
+      description="We start by understanding your business, identifying bottlenecks, and mapping out opportunities for automation."
+    />
+
+    <!--  Item 6 -->
+    <LiquidCardIcon
+      Icon={UserIcon}
+      title="Discover & Analyze"
+      description="We start by understanding your business, identifying bottlenecks, and mapping out opportunities for automation."
+    />
+  </div>
+</section>

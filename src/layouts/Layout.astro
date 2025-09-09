@@ -40,7 +40,45 @@ const { title } = Astro.props;
     font-family: "Manrope", sans-serif;
     color: #222222;
     letter-spacing: -0.025em;
-    background: #F5F5F5;
+    background: #f5f5f5;
+  }
+
+  nav {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px; /* hasta dónde se aplica el efecto */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    transition:
+      background 0.3s ease,
+      backdrop-filter 0.3s ease;
+  }
+
+  @keyframes blur {
+    from {
+      background: transparent;
+      backdrop-filter: blur(0px);
+    }
+    to {
+      background: #eaeaea80;
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .liquid-effect {
+    background: linear-gradient(
+      180deg,
+      rgb(255, 255, 255) 0%,
+      rgb(245, 245, 245) 116%
+    );
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow:
+      0 0.6px 1.80656px -0.75px rgba(0, 0, 0, 0.05),
+      0 2.28853px 6.8656px -1.5px rgba(0, 0, 0, 0.05),
+      0 10px 30px -2.25px rgba(0, 0, 0, 0.06);
   }
 
   .shadow-fancy {

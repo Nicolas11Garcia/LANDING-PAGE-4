@@ -1,0 +1,13 @@
+---
+const { Icon, title, description } = Astro.props;
+---
+
+<div class="liquid-effect max-w-fit p-4">
+  <div class="mb-4 liquid-effect max-w-fit p-2 flex items-center justify-center">
+    <!-- Renderiza el icono SVG recibido -->
+    <Icon className="w-6 h-6 text-primary" />
+  </div>
+
+  <h3 class="font-medium text-xl mb-1">{title}</h3>
+  <p class="text-sm text-text-secundary font-medium">{description}</p>
+</div>

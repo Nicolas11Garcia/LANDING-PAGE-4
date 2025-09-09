@@ -62,7 +62,7 @@ import CurvedLines from "../components/CurvedLines.astro";
     position: relative;
   }
 
-  /* Gradiente animado */
+  /* Gradiente animado de fondo */
   .cta-circle::before {
     content: "";
     position: absolute;
@@ -76,12 +76,24 @@ import CurvedLines from "../components/CurvedLines.astro";
     );
     filter: blur(20px);
     animation: rotate 4s linear infinite;
+    z-index: 0;
+  }
+
+  /* Borde interior */
+  .cta-circle::after {
+    content: "";
+    position: absolute;
+    inset: 10px; /* espacio desde el borde exterior */
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 1;
+    pointer-events: none;
   }
 
   /* Texto legible */
   .cta-circle span {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
   @keyframes rotate {

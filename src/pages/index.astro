@@ -2,15 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 
 import Brands from "../components/Brands.astro";
+import Footer from "../components/Footer.astro";
+import PreguntasFrecuentes from "../components/PreguntasFrecuentes.astro";
+import Testimoneos from "../components/Testimoneos.astro";
+import Features from "../sections/Features.astro";
 import Home from "../sections/Home.astro";
 import NavBar from "../sections/NavBar.astro";
-import PreguntasFrecuentes from "../components/PreguntasFrecuentes.astro";
-import SectionGridOne from "../components/SectionGridOne.astro";
-import SectionGridTwo from "../components/SectionGridTwo.astro";
-import Services from "../components/Services.astro";
-import Testimoneos from "../components/Testimoneos.astro";
-import SectionGridThreeEnd from "../components/SectionGridThreeEnd.astro";
-import Footer from "../components/Footer.astro";
+import Process from "../sections/Process.astro";
+import Services from "../sections/Services.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,12 +17,10 @@ import Footer from "../components/Footer.astro";
     <NavBar />
     <Home />
     <Brands />
+    <Process />
     <Services />
-    <SectionGridOne />
-    <SectionGridTwo />
-    <Testimoneos />
+    <Features />
     <PreguntasFrecuentes />
-    <SectionGridThreeEnd />
   </main>
   <Footer />
 </Layout>

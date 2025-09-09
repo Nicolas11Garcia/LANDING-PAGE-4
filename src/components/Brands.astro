@@ -1,17 +1,32 @@
 ---
 import brands from "../data/brands.js";
+import Badget from "./Badget.astro";
 ---
 
-{/*Marcas*/}
 <section
-data-aos="fade-up" 
-class="py-[60px] flex flex-col px-5 gap-8 ">
-  <p class="text-plomo text-lg font-medium text-center">
-    Trusted by 67+ startups and agencies
+  data-aos="fade-up"
+  class="pt-[120px] pb-[80px]  flex flex-col px-5 gap-8 max-w-[1280px] mx-auto"
+>
+  <Badget  title="About us" />
+
+  <h2 class="text-5xl font-medium text-center text-balance">
+    Calisto is an AI automation agency helping modern businesses streamline
+    operations, boost productivity, and scale smarter.
+  </h2>
+
+  <div
+    class="h-px w-full max-w-[700px] mx-auto bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"
+  >
+  </div>
+
+  <p class="font-medium text-text-secundary text-sm text-center">
+    Trusted by 100+ partners & businesses
   </p>
+
+  <!-- Marcas -->
   <div
     class="w-full
-     mx-auto max-w-[1220px]
+     mx-auto max-w-[900px]
       flex px-6
        overflow-hidden gap-16
         [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
