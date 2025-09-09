@@ -1,0 +1,104 @@
+<section
+  class="mx-6"
+>
+  <div
+    class="relative liquid-effect min-h-[600px] flex flex-col justify-center max-w-[1280px]
+   items-center text-center px-6 mx-auto overflow-hidden mb-5"
+  >
+    <!-- Video de fondo -->
+    <video
+      src="/public/video-home.mp4"
+      class="absolute inset-0 w-full h-full object-cover block opacity-20"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+    </video>
+
+    <!-- Contenido centrado -->
+    <div class="space-y-10 relative z-10">
+      <div class="space-y-4">
+        <h1 class="text-7xl font-medium leading-tight">
+          Automate Smarter
+          <br />
+          <span class="text-primary">With Calisto </span>
+        </h1>
+      </div>
+
+      <div class="max-w-fit mx-auto">
+        <a href="#pricing" class="cta-circle">
+          <span>Get Started</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Contenedor relativo al div, no fijo */
+  .cta-circle {
+    margin-top: 20px; /* separación del <p> */
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Gradiente animado de fondo */
+  .cta-circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #61b5ff 0deg,
+      #1e69ff 180deg,
+      #3d80d2 360deg
+    );
+    filter: blur(20px);
+    animation: rotate 4s linear infinite;
+    z-index: 0;
+  }
+
+  /* Borde interior */
+  .cta-circle::after {
+    content: "";
+    position: absolute;
+    inset: 10px; /* espacio desde el borde exterior */
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Texto legible */
+  .cta-circle span {
+    position: relative;
+    z-index: 2;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .cta-circle:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+</style>
