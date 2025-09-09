@@ -1,0 +1,45 @@
+---
+import { Link, Button } from "@nextui-org/react";
+---
+
+<section
+  class="mx-6 flex justify-center"
+>
+  <div class="rounded-2xl 
+ pt-[60px] p-6 sm:p-12 flex max-w-[1220px] bg-blue-50
+gap-10 sm:gap-20 items-center flex-col lg:flex-row">
+    <!-- left-->
+    <div data-aos="fade-right" class="flex flex-col gap-10 max-w-[600px]">
+      <!--Text-->
+      <div class="space-y-4">
+        <h3 
+         class="text-negro text-4xl sm:text-5xl font-semibold">
+          Ready to Transform Your Experience?
+        </h3>
+
+        <p
+          class="text-plomo text-lg font-medium
+   text-balance"
+        >
+          Get Started Now and Explore New Possibilities with Our Comprehensive
+          Resources.
+        </p>
+      </div>
+      <!-- Button -->
+      <div class="gap-4 flex flex-wrap">
+        <Button as={Link} size="lg" color="primary" className="font-semibold"
+          >Get Full Template</Button
+        >
+      </div>
+    </div>
+
+    <!-- Img -->
+    <div  data-aos="fade-up" class="max-w-fit lg:max-w-[430px] w-full">
+      <img
+        class="rounded-3xl"
+        src="https://framerusercontent.com/images/ODbs1AeljoPnKKqfmC5NimejRU.png?scale-down-to=512"
+        alt=""
+      />
+    </div>
+  </div>
+</section>

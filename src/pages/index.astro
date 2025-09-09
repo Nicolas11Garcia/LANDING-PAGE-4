@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Brands from "../components/Brands.astro";
+import Home from "../sections/Home.astro";
+import NavBar from "../sections/NavBar.astro";
+import PreguntasFrecuentes from "../components/PreguntasFrecuentes.astro";
+import SectionGridOne from "../components/SectionGridOne.astro";
+import SectionGridTwo from "../components/SectionGridTwo.astro";
+import Services from "../components/Services.astro";
+import Testimoneos from "../components/Testimoneos.astro";
+import SectionGridThreeEnd from "../components/SectionGridThreeEnd.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <NavBar />
+    <Home />
+    <Brands />
+    <Services />
+    <SectionGridOne />
+    <SectionGridTwo />
+    <Testimoneos />
+    <PreguntasFrecuentes />
+    <SectionGridThreeEnd />
+  </main>
+  <Footer />
+</Layout>

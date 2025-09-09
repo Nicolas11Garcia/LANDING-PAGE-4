@@ -1,0 +1,66 @@
+---
+
+---
+
+<nav class="w-full z-[1000] fixed">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="text-xl font-bold">
+      <img
+        class="max-w-[87px]"
+        src="https://framerusercontent.com/images/AUY5upt5Rt4jpjJ1gntrqMjSM.svg"
+      />
+    </div>
+
+    <!-- Menú en desktop -->
+    <div
+      class="hidden md:flex space-x-8 text-sm font-semibold text-[#525252] tracking-tight"
+    >
+      <a href="#" class="hover:text-blue-500">Process</a>
+      <a href="#" class="hover:text-blue-500">Services</a>
+      <a href="#" class="hover:text-blue-500">Projects</a>
+      <a href="#" class="hover:text-blue-500">Pricing</a>
+      <a href="#" class="hover:text-blue-500">Blog</a>
+      <a href="#" class="hover:text-blue-500">Contact</a>
+    </div>
+
+    <!-- Botón -->
+    <a
+      href="./contact"
+      class="inline-flex items-center justify-center  rounded-full bg-white border-[3px]
+       border-white text-gray-700 no-underline shadow-fancy w-full max-w-[117.39px] min-h-[41.2px]"
+      role="button"
+      aria-label="Book a Call"
+    >
+      <span class="text-base font-semibold">Book a Call</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo mobile) -->
+    <button id="menu-btn" class="md:hidden flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+    </button>
+  </div>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="hidden flex-col space-y-4 px-4 pb-4 md:hidden">
+    <a href="#" class="hover:text-blue-500">Home</a>
+    <a href="#" class="hover:text-blue-500">About</a>
+    <a href="#" class="hover:text-blue-500">Contact</a>
+    <button
+      class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+    >
+      Sign Up
+    </button>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
