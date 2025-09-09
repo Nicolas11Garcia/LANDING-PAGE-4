@@ -2,37 +2,99 @@
 import CurvedLines from "../components/CurvedLines.astro";
 ---
 
-<section class="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+<section
+  class="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 overflow-hidden"
+>
   <!-- Video de fondo -->
-<video
-  src="/video-home.mp4"
-  class="absolute inset-0 w-full h-full object-cover block opacity-20"
-  autoplay
-  muted
-  loop
-  playsinline
-></video>
+  <video
+    src="/public/video-home.mp4"
+    class="absolute inset-0 w-full h-full object-cover block opacity-20"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+  </video>
 
   <!-- Contenido centrado -->
-  <div class="space-y-6 relative z-10">
-    <h1 class="text-8xl font-medium leading-tight">
-      AI-Powered Automation <br />
-      <span class="text-primary">for Modern Teams</span>
-    </h1>
+  <div class="space-y-10 relative z-10">
+    <div class="space-y-4">
+      <h1 class="text-8xl font-medium leading-tight">
+        AI-Powered Automation <br />
+        <span class="text-primary">for Modern Teams</span>
+      </h1>
 
-    <p class="text-text-secundary font-medium">
-      Streamline operations, boost productivity, and scale smarter with Calisto.
-    </p>
+      <p class="text-text-secundary font-medium">
+        Streamline operations, boost productivity, and scale smarter with
+        Calisto.
+      </p>
+    </div>
 
-  </div>
-
-  <!-- Círculo Get Started fijo abajo -->
-  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-40 h-40">
-    <div class="relative w-full h-full rounded-full">
-      <div class="absolute inset-0 bg-primary rounded-full blur-lg"></div>
-      <div class="relative flex items-center justify-center w-full h-full border border-white rounded-full text-white font-medium">
-        Get Started
-      </div>
+    <div class="max-w-fit mx-auto">
+      <a href="#pricing" class="cta-circle">
+        <span>Get Started</span>
+      </a>
     </div>
   </div>
+
+  <div
+    class="absolute bottom-0 left-0 w-full h-40 pointer-events-none bg-gradient-to-b from-transparent to-[#F5F5F5]"
+  >
+  </div>
 </section>
+
+<style>
+  /* Contenedor relativo al div, no fijo */
+  .cta-circle {
+    margin-top: 20px; /* separación del <p> */
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Gradiente animado */
+  .cta-circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #61b5ff 0deg,
+      #1e69ff 180deg,
+      #3d80d2 360deg
+    );
+    filter: blur(20px);
+    animation: rotate 4s linear infinite;
+  }
+
+  /* Texto legible */
+  .cta-circle span {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .cta-circle:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+</style>
