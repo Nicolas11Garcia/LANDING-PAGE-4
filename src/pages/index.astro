@@ -15,14 +15,17 @@ import BeforeFooter from "../sections/BeforeFooter.astro";
 <Layout title="Welcome to Astro.">
   <NavBar />
 
-  <main class="px-6">
+  <main>
     <Home />
-    <Brands />
-    <Process />
-    <Services />
-    <Features />
-    <FrequentlyAskedQuestions />
-    <BeforeFooter />
+    <div class="px-6">
+      <Brands />
+      <Process />
+      <Services />
+      <Features />
+      <FrequentlyAskedQuestions />
+
+      <BeforeFooter />
+    </div>
   </main>
   <Footer />
 </Layout>

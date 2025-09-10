@@ -2,14 +2,11 @@
 
 ---
 
-<nav class="w-full z-[1000] fixed">
+<nav class="w-full z-[1000]">
   <div class="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
     <!-- Logo -->
     <div class="text-xl font-bold">
-      <img
-        class="max-w-[150px]"
-        src="/public/img/logo.webp"
-      />
+      <img class="max-w-[150px]" src="/public/img/logo.webp" />
     </div>
 
     <!-- Menú en desktop -->
@@ -27,8 +24,8 @@
     <!-- Botón -->
     <a
       href="./contact"
-      class="hidden md:flex items-center justify-center  rounded-full bg-white border-[3px]
-       border-white text-gray-700 no-underline shadow-fancy w-full max-w-[117.39px] min-h-[41.2px] "
+      class="hidden md:flex items-center justify-center rounded-full bg-white border-[3px]
+       border-white text-gray-700 no-underline shadow-fancy w-full max-w-[117.39px] min-h-[41.2px]"
       role="button"
       aria-label="Book a Call"
     >
@@ -44,23 +41,27 @@
   </div>
 
   <!-- Menú móvil -->
-  <div id="mobile-menu" class="flex flex-col space-y-4 px-4 pb-4 md:hidden">
+  <div
+    id="mobile-menu"
+    class="hidden flex  flex-col space-y-4 px-4 pb-4 md:hidden"
+  >
     <a href="#" class="hover:text-blue-500">Home</a>
     <a href="#" class="hover:text-blue-500">About</a>
     <a href="#" class="hover:text-blue-500">Contact</a>
-    <button
-      class="liquid-effect text-text-primary px-4 py-2 rounded-lg"
-    >
+    <button class="liquid-effect text-text-primary px-4 py-2 rounded-lg">
       Sign Up
     </button>
   </div>
 </nav>
 
 <script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menu-btn");
+    const nav = document.querySelector("nav");
 
-  btn?.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("menu-open");
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
   });
 </script>

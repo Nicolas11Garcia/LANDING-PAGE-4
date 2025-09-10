@@ -57,6 +57,13 @@ const { title } = Astro.props;
       backdrop-filter 0.3s ease;
   }
 
+  /* Cuando el menú está abierto */
+  nav.menu-open {
+    animation: none; /* 🚨 desactiva animación scroll */
+    background: #eaeaea80;
+    backdrop-filter: blur(10px);
+  }
+
   @keyframes blur {
     from {
       background: transparent;
