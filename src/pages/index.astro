@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import Brands from "../sections/Brands.astro";
+import AboutUs from "../sections/AboutUs.astro";
 import Features from "../sections/Features.astro";
 import Footer from "../sections/Footer.astro";
 import FrequentlyAskedQuestions from "../sections/FrequentlyAskedQuestions.astro";
@@ -10,6 +10,7 @@ import NavBar from "../sections/NavBar.astro";
 import Process from "../sections/Process.astro";
 import Services from "../sections/Services.astro";
 import BeforeFooter from "../sections/BeforeFooter.astro";
+import Contact from "../sections/Contact.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,12 +19,15 @@ import BeforeFooter from "../sections/BeforeFooter.astro";
   <main>
     <Home />
     <div class="px-6">
-      <Brands />
+      <AboutUs />
       <Process />
       <Services />
       <Features />
       <FrequentlyAskedQuestions />
+    </div>
 
+    <Contact />
+    <div class="px-6">
       <BeforeFooter />
     </div>
   </main>
