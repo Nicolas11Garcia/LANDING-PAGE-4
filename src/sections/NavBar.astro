@@ -6,7 +6,7 @@
   <div class="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
     <!-- Logo -->
     <div class="text-xl font-bold">
-      <img class="max-w-[150px]" src="/public/img/logo.webp" />
+      <img class="max-w-[150px]" src="/img/logo.webp" loading="lazy" />
     </div>
 
     <!-- Menú en desktop -->
@@ -23,7 +23,7 @@
 
     <!-- Botón -->
     <a
-     href="#contact"
+      href="#contact"
       class="hidden md:flex items-center justify-center rounded-full bg-white border-[3px]
        border-white text-gray-700 no-underline shadow-fancy w-full max-w-[117.39px] min-h-[41.2px]"
       role="button"
@@ -43,7 +43,7 @@
   <!-- Menú móvil -->
   <div
     id="mobile-menu"
-    class="hidden flex  flex-col space-y-4 px-4 pb-4 md:hidden"
+    class="hidden flex-col space-y-4 px-4 pb-4 md:hidden"
   >
     <a href="#" class="hover:text-text-primary">Home</a>
     <a href="#" class="hover:text-text-primary">About</a>
@@ -61,7 +61,9 @@
 
     menuBtn.addEventListener("click", () => {
       nav.classList.toggle("menu-open");
-      document.getElementById("mobile-menu").classList.toggle("hidden");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
     });
   });
 </script>

@@ -1,10 +1,15 @@
 ---
-const { imgSrc, title, description } = Astro.props;
+const { imgSrc, title, description, imgClass = "" } = Astro.props;
 ---
 
 <div class="liquid-effect max-w-fit p-4" data-aos="fade-up">
   <div class="mb-4 border-2 border-white rounded-xl">
-    <img src={imgSrc} alt={title} class="object-cover rounded-xl" />
+    <img 
+      src={imgSrc} 
+      alt={title} 
+      loading="lazy"
+      class={`object-cover rounded-xl ${imgClass}`} 
+    />
   </div>
 
   <h3 class="font-medium text-xl mb-1">{title}</h3>

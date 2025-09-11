@@ -39,7 +39,7 @@ import Badget from "../components/Badget.astro";
     >
       {
         brands.map((brand) => (
-          <img width="120" src={brand.url} alt={brand.name} />
+          <img width="120" src={brand.url} alt={brand.name} loading="lazy"/>
         ))
       }
     </ul>
